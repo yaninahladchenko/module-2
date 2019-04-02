@@ -24,9 +24,9 @@ public class QuadraticEquation {
         14*14-4*1*49=196-196= 0*/
 
         else if (discriminant == 0) {
-            x1 = x2 = -b / (2 * a);
+            double x = -b / (2 * a);
             System.out.println("There is only 1 root");
-            System.out.println(String.format("x1=%s x2=%s", x1, x2));
+            System.out.println(String.format("x1=x2=%s", x));
         }
 
         /*a=2, b=14, c =49
