@@ -6,10 +6,15 @@ public class StatisticInformation {
 
     public static void main(String[] args) {
         int[] arr = {206, 430, 73, 30, 293, 322, 30, 36, 447, 229};
-        arithmeticMean(arr);
-        arithmeticMedian(arr);
-        arithmeticMode(arr);
-        calculateDeviation(arr);
+        if (arr.length > 0) {
+            arithmeticMean(arr);
+            arithmeticMedian(arr);
+            arithmeticMode(arr);
+            calculateDeviation(arr);
+        } else {
+            System.out.println("Please add at least 1 element into array.");
+        }
+
     }
 
     private static void arithmeticMean(int[] arr) {
@@ -26,9 +31,9 @@ public class StatisticInformation {
         // Calculate arithmetic median
         Arrays.sort(arr);
         double median;
-        if (arr.length % 2 == 0)
+        if (arr.length % 2 == 0) {
             median = ((double) arr[arr.length / 2] + (double) arr[arr.length / 2 - 1]) / 2;
-        else
+        } else
             median = (double) arr[arr.length / 2];
 
         System.out.println("Arithmetic Median is: " + median);
